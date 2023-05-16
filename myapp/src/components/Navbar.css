@@ -1,0 +1,115 @@
+:root {
+    --g-c: #2e5749;
+}
+
+.navbar {
+    padding: 0 25rem;
+    height: calc(100px + 1rem);
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+
+.logo img {
+    width: 70px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: var(--g-c);
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.navbar a:hover {
+    border-bottom: 1px solid var(--g-c);
+}
+
+.navbar .icon {
+    display: none;
+    cursor: pointer;
+    font-size: 40px;
+    fill: var(--g-c);
+}
+
+/* media queries */
+@media screen and (max-width: 992px) {
+    .navbar {
+        padding: 0 130px;
+    }
+
+    .navbar .navLinks {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        background-color: var(--g-c);
+        z-index: 10000;
+        width: 100%;
+        left: 0;
+        padding: 0;
+        margin: 0 auto;
+        top: -700%;
+        transition: 1s ease;
+    }
+    /* .navbar .links {
+        position: absolute;
+        background: var(--g-c);
+        height: max-content;
+        width: 80%;
+        padding: 1rem;
+        top: -700%;
+        left: 50%;
+        transform: translate(-50%);
+        box-shadow: 0 2px 4px rgba(243, 243, 243, 0.904);
+        transition: .3s ease;
+        z-index: 10000;
+        border-radius: 10px;
+    } */
+
+    .navbar .active {
+        top: 100%;
+    }
+
+    /* .navbar .logo {
+        transform: translateX(210px);
+    } */
+
+    .navbar .icon {
+        display: block;
+        /* transform: translateX(-210px); */
+        color: var(--g-c);
+    }
+
+    .navbar .link {
+        padding: 20px 0;
+    }
+
+    .navbar a {
+        color: white;
+    }
+
+    .navbar a:hover {
+        border-bottom: 1px solid white;
+    }
+}
+
+/* @media screen and (max-width: 830px) {
+    .navbar .icon {
+        transform: translateX(-113px);
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .navbar .icon {
+        transform: translateX(-113px);
+    }
+} */
